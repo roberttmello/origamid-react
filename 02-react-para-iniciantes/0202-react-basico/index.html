@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0202 - React Básico</title>
+  </head>
+  <body>
+    <div id="app-funcional"></div>
+    <div id="app-classe"></div>
+
+    <script type="text/babel">
+
+
+    const ComponenteFuncional = () => {
+
+      
+      const numeroAleatorio = Math.random() * 127;
+      return <div>
+          <h1>Meu app funcional</h1>
+          <p>{numeroAleatorio}</p>
+          <Button/>
+        </div>
+    }
+
+    class ComponenteClasse extends React.Component {
+      render() {
+        return <div>
+          <h1>Meu app com classe</h1>
+          <ComponenteFuncional/>
+        </div>
+      }
+    }
+
+    const Button = () => {
+
+      function handleClick(event) {
+        console.log(event.target.innerText);
+      }
+
+      return <button onClick={handleClick}>Comprar</button>
+
+    }
+
+      
+      ReactDOM.render(<ComponenteFuncional />, document.getElementById("app-funcional"));
+      ReactDOM.render(<ComponenteClasse />, document.getElementById("app-classe"));
+      
+    </script>
+
+   <!-- Adiciona React, ReactDOM e Babel -->
+   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </body>
+</html>
