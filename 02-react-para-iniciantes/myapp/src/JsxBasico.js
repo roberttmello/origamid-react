@@ -1,20 +1,15 @@
 import React from "react";
 
-// Mostre os dados da aplicação, como aprensetado no vídeo
-// Não utilize CSS externo, use o style para mudar as cores
-// Se a situação estiver ativa pinte de verde, inativa vermelho
-// Se o gasto for maior que 10000 mostre uma mensagem
-
-const luana = {
-  cliente: "Luana",
-  idade: 27,
-  compras: [
-    { nome: "Notebook", preco: "R$ 2500" },
-    { nome: "Geladeira", preco: "R$ 3000" },
-    { nome: "Smartphone", preco: "R$ 1500" },
-  ],
-  ativa: true,
-};
+// const luana = {
+//   cliente: "Luana",
+//   idade: 27,
+//   compras: [
+//     { nome: "Notebook", preco: "R$ 2500" },
+//     { nome: "Geladeira", preco: "R$ 3000" },
+//     { nome: "Smartphone", preco: "R$ 1500" },
+//   ],
+//   ativa: true,
+// };
 
 const mario = {
   cliente: "Mario",
@@ -28,7 +23,7 @@ const mario = {
   ativa: false,
 };
 
-const App = () => {
+const JsxBasico = () => {
   const dados = mario;
   const totalGasto = dados.compras
     .map((compra) => Number(compra.preco.replace("R$ ", "")))
@@ -36,7 +31,7 @@ const App = () => {
 
   return (
     <>
-      <h1>JSX</h1>
+      <h1>JSX Básico</h1>
       <span>____________________________________________</span>
       <p>{dados.cliente}</p>
       <p>{dados.idade}</p>
@@ -52,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default JsxBasico;

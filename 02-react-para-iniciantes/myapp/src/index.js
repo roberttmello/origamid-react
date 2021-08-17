@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import JsxBasico from "./JsxBasico";
+import JsxArrays from "./JsxArrays";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <>
+    <JsxBasico />
+    <JsxArrays/>
+  </>,
+  document.getElementById("root"),
 );
-
-
